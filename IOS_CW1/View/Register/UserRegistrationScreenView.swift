@@ -12,9 +12,9 @@ struct UserRegistrationScreenView: View {
     @State private var fullName = ""
     @State private var password = ""
     var body: some View {
-        VStack {
+        ScrollView {
             VStack(spacing: 20) {
-                Text("Sign Up")
+                Text("User Registration")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.bottom, 10)
@@ -51,3 +51,48 @@ struct UserRegistrationScreenView_Previews: PreviewProvider {
         UserRegistrationScreenView()
     }
 }
+
+
+
+struct SocialLoginButton: View {
+    var image: Image
+    var text: Text
+    
+    var body: some View {
+        VStack {
+            HStack {
+                image
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .padding(.horizontal)
+                Spacer()
+                text
+                    .font(.title2)
+                Spacer()
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.white)
+            .cornerRadius(50.0)
+        .shadow(color: Color.black.opacity(0.08), radius: 10, x: 0.0, y: 0.0)
+        }
+        .padding(.bottom, -15)
+    }
+    
+}
+
+struct RegisterTextField: View {
+    @Binding var text: String
+    var placeholder: String
+    
+    var body: some View {
+        TextField(placeholder, text: $text)
+            .font(.title3)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.white)
+            .cornerRadius(50.0)
+            .shadow(color: Color.black.opacity(0.08), radius: 10, x: 0.0, y: 0.0)
+    }
+}
+

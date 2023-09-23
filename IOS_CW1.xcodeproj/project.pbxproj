@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		782205E82ABED919004D84F6 /* UserRegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205E72ABED919004D84F6 /* UserRegistrationScreenView.swift */; };
+		782205EA2ABEDD0D004D84F6 /* UserLoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205E92ABEDD0D004D84F6 /* UserLoginScreenView.swift */; };
+		782205EC2ABEE6DB004D84F6 /* DashboardScreenview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205EB2ABEE6DB004D84F6 /* DashboardScreenview.swift */; };
 		78839DB02ABE9E8200D0778D /* IOS_CW1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78839DAF2ABE9E8200D0778D /* IOS_CW1App.swift */; };
 		78839DB22ABE9E8200D0778D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78839DB12ABE9E8200D0778D /* ContentView.swift */; };
 		78839DB42ABE9E8400D0778D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78839DB32ABE9E8400D0778D /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		782205E72ABED919004D84F6 /* UserRegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationScreenView.swift; sourceTree = "<group>"; };
+		782205E92ABEDD0D004D84F6 /* UserLoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginScreenView.swift; sourceTree = "<group>"; };
+		782205EB2ABEE6DB004D84F6 /* DashboardScreenview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreenview.swift; sourceTree = "<group>"; };
 		78839DAC2ABE9E8200D0778D /* IOS_CW1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_CW1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78839DAF2ABE9E8200D0778D /* IOS_CW1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_CW1App.swift; sourceTree = "<group>"; };
 		78839DB12ABE9E8200D0778D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +40,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		782205EF2ABEF9C8004D84F6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				782205E92ABEDD0D004D84F6 /* UserLoginScreenView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		782205F02ABEF9FE004D84F6 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				782205EB2ABEE6DB004D84F6 /* DashboardScreenview.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		782205F12ABEFA0F004D84F6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				782205E72ABED919004D84F6 /* UserRegistrationScreenView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		782205F22ABEFA2A004D84F6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				78839DC02ABEACED00D0778D /* WelcomeScreenView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		782205F32ABEFAB2004D84F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		78839DA32ABE9E8200D0778D = {
 			isa = PBXGroup;
 			children = (
@@ -55,7 +98,8 @@
 		78839DAE2ABE9E8200D0778D /* IOS_CW1 */ = {
 			isa = PBXGroup;
 			children = (
-				78839DBF2ABEA5AB00D0778D /* UI-Screens */,
+				782205F32ABEFAB2004D84F6 /* Model */,
+				78839DBF2ABEA5AB00D0778D /* View */,
 				78839DAF2ABE9E8200D0778D /* IOS_CW1App.swift */,
 				78839DB12ABE9E8200D0778D /* ContentView.swift */,
 				78839DB32ABE9E8400D0778D /* Assets.xcassets */,
@@ -72,13 +116,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		78839DBF2ABEA5AB00D0778D /* UI-Screens */ = {
+		78839DBF2ABEA5AB00D0778D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				78839DC02ABEACED00D0778D /* WelcomeScreenView.swift */,
-				782205E72ABED919004D84F6 /* UserRegistrationScreenView.swift */,
+				782205F22ABEFA2A004D84F6 /* Main */,
+				782205F12ABEFA0F004D84F6 /* Register */,
+				782205F02ABEF9FE004D84F6 /* Dashboard */,
+				782205EF2ABEF9C8004D84F6 /* Login */,
 			);
-			path = "UI-Screens";
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				782205EA2ABEDD0D004D84F6 /* UserLoginScreenView.swift in Sources */,
+				782205EC2ABEE6DB004D84F6 /* DashboardScreenview.swift in Sources */,
 				782205E82ABED919004D84F6 /* UserRegistrationScreenView.swift in Sources */,
 				78839DC12ABEACED00D0778D /* WelcomeScreenView.swift in Sources */,
 				78839DB22ABE9E8200D0778D /* ContentView.swift in Sources */,
