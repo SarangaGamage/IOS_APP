@@ -22,11 +22,11 @@ struct UserLoginScreenView: View {
                     .resizable()
                     .frame(width: 332, height: 332)
 
-                RegisterTextField(text: $emailAddress, placeholder: "Email address")
+                InputTextField(text: $emailAddress, placeholder: "Email address")
                 
-                RegisterTextField(text: $password, placeholder: "Password")
+                InputTextField(text: $password, placeholder: "Password")
                 
-                PrimaryButton(title: "Sign In")
+                ButtonPrimary(title: "Sign In")
                 
                 NavigationLink(destination: UserRegistrationScreenView(), label: {
                     HStack {

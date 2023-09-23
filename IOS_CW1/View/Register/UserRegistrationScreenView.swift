@@ -23,13 +23,13 @@ struct UserRegistrationScreenView: View {
                     .resizable()
                     .frame(width: 332, height: 332)
                 
-                RegisterTextField(text: $fullName, placeholder: "Full name")
+                InputTextField(text: $fullName, placeholder: "Full name")
                 
-                RegisterTextField(text: $emailAddress, placeholder: "Email address")
+                InputTextField(text: $emailAddress, placeholder: "Email address")
                 
-                RegisterTextField(text: $password, placeholder: "Password")
+                InputTextField(text: $password, placeholder: "Password")
                 
-                PrimaryButton(title: "Sign Up")
+                ButtonPrimary(title: "Sign Up")
                 
                 Text("or sign in using below social logins")
                     .foregroundColor(Color.black.opacity(0.6))
@@ -81,18 +81,18 @@ struct SocialLoginButton: View {
     
 }
 
-struct RegisterTextField: View {
-    @Binding var text: String
-    var placeholder: String
-    
-    var body: some View {
-        TextField(placeholder, text: $text)
-            .font(.title3)
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(Color.white)
-            .cornerRadius(50.0)
-            .shadow(color: Color.black.opacity(0.08), radius: 10, x: 0.0, y: 0.0)
-    }
-}
+//struct RegisterTextField: View {
+//    @Binding var text: String
+//    var placeholder: String
+//
+//    var body: some View {
+//        TextField(placeholder, text: $text)
+//            .font(.title3)
+//            .padding()
+//            .frame(maxWidth: .infinity)
+//            .background(Color.white)
+//            .cornerRadius(50.0)
+//            .shadow(color: Color.black.opacity(0.08), radius: 10, x: 0.0, y: 0.0)
+//    }
+//}
 

@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct BudgetView: View {
-    
+    @State private var isModalPresented = false
     @State var listArr: [BudgetModel] = [
         BudgetModel(dict: [ "name": "Auto & Transport",
-                            "icon": "auto_&_transport",
+                        //    "icon": "auto_&_transport",
                             "spend_amount": "25.99",
                             "total_amount": "400",
                             "left_amount": "0.01"] ),
         
         BudgetModel(dict: [ "name": "Entertainment",
-                            "icon": "entertainment",
+                           // "icon": "entertainment",
                             "spend_amount": "50.99",
                             "total_amount": "600",
                             "left_amount": "10.01"]),
         
         BudgetModel(dict: [ "name": "Security",
-                            "icon": "security",
+                          //  "icon": "security",
                             "spend_amount": "550.99",
                             "total_amount": "600",
                             "left_amount": "250.01"])
@@ -51,20 +51,18 @@ struct BudgetView: View {
                 
                 
                 Button {
-                    
+                    isModalPresented.toggle()
                 } label: {
-                    HStack{
+                    HStack {
                         Text("Add new category ")
                             .font(.system(size: 14, weight: .bold))
-
                         
                         Image("add")
                             .resizable()
                             .frame(width: 14, height: 14)
                     }
-                    
                 }
-                .foregroundColor( .gray )
+                .foregroundColor(.gray)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 64, maxHeight: 64)
                 
                 
@@ -84,7 +82,17 @@ struct BudgetView: View {
 
             .background(Color.white)
             .ignoresSafeArea()
+        
+            .sheet(isPresented: $isModalPresented) {
+                NavigationView {
+                    CategoryAdd(isPresented: $isModalPresented)
+                        .navigationBarItems(trailing: Button("Cancel") {
+                            isModalPresented = false
+                        })
+                }
+            }
         }
+
     
 
 }
@@ -94,3 +102,5 @@ struct BudgetView_Previews: PreviewProvider {
         BudgetView()
     }
 }
+
+

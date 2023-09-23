@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NavigationTab: View {
-
+    @State var isAddExpenseSheetPresented = false
     @State var selectTab: Int = 0
     
     var body: some View {
@@ -97,20 +97,22 @@ struct NavigationTab: View {
                     }
                     
                     Button {
-                        
-                    } label: {
-                        Image("AddButton")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .padding()
-                    }
-                    .padding(.bottom, 6)
+                          isAddExpenseSheetPresented.toggle()
+                      } label: {
+                          Image("AddButton")
+                              .resizable()
+                              .frame(width: 50, height: 50)
+                              .padding()
+                      }
+                      .padding(.bottom, 6)
                   //  .shadow(color: .secondaryC.opacity(0.5), radius: 6,y: 4)
                 }
             }
             .padding(.horizontal, 20)
             .padding(.bottom , 10)
-            
+            .sheet(isPresented: $isAddExpenseSheetPresented) {
+                       ExpensesAdd(isPresented: $isAddExpenseSheetPresented)
+                   }
         }
        // .background(Color.gray)
         .ignoresSafeArea()
