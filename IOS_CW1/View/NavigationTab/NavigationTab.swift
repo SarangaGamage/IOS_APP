@@ -26,10 +26,10 @@ struct NavigationTab: View {
                DashboardView()
             }
             
-//            if(selectTab == 3) {
-//                CardsView()
-//                    .frame(width: .screenWidth, height: .screenHeight)
-//            }
+            if(selectTab == 3) {
+               DashboardView()
+            }
+            
             
             VStack{
                 Spacer()
