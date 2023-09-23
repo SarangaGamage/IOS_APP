@@ -18,6 +18,10 @@
 		782206012ABF0005004D84F6 /* UpcomingBillRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206002ABF0005004D84F6 /* UpcomingBillRow.swift */; };
 		782206032ABF1632004D84F6 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206022ABF1632004D84F6 /* Expense.swift */; };
 		782206062ABF16D7004D84F6 /* ExpenseAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206052ABF16D7004D84F6 /* ExpenseAdd.swift */; };
+		782206092ABF1871004D84F6 /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206082ABF1871004D84F6 /* NavigationTab.swift */; };
+		7822060C2ABF2533004D84F6 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7822060B2ABF2533004D84F6 /* BudgetView.swift */; };
+		782206122ABF263F004D84F6 /* BudgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206112ABF263F004D84F6 /* BudgetModel.swift */; };
+		782206162ABF2901004D84F6 /* BudgetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206152ABF2901004D84F6 /* BudgetCard.swift */; };
 		78839DB02ABE9E8200D0778D /* IOS_CW1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78839DAF2ABE9E8200D0778D /* IOS_CW1App.swift */; };
 		78839DB22ABE9E8200D0778D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78839DB12ABE9E8200D0778D /* ContentView.swift */; };
 		78839DB42ABE9E8400D0778D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78839DB32ABE9E8400D0778D /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 		782206002ABF0005004D84F6 /* UpcomingBillRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingBillRow.swift; sourceTree = "<group>"; };
 		782206022ABF1632004D84F6 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		782206052ABF16D7004D84F6 /* ExpenseAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseAdd.swift; sourceTree = "<group>"; };
+		782206082ABF1871004D84F6 /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
+		7822060B2ABF2533004D84F6 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
+		782206112ABF263F004D84F6 /* BudgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModel.swift; sourceTree = "<group>"; };
+		782206152ABF2901004D84F6 /* BudgetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCard.swift; sourceTree = "<group>"; };
 		78839DAC2ABE9E8200D0778D /* IOS_CW1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_CW1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78839DAF2ABE9E8200D0778D /* IOS_CW1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_CW1App.swift; sourceTree = "<group>"; };
 		78839DB12ABE9E8200D0778D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +101,7 @@
 			children = (
 				782205F42ABEFC75004D84F6 /* SubscriptionModel.swift */,
 				782206022ABF1632004D84F6 /* Expense.swift */,
+				782206112ABF263F004D84F6 /* BudgetModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +114,7 @@
 				782205FB2ABEFF44004D84F6 /* SegmentButton.swift */,
 				782205FE2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift */,
 				782206002ABF0005004D84F6 /* UpcomingBillRow.swift */,
+				782206152ABF2901004D84F6 /* BudgetCard.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -115,6 +125,22 @@
 				782206052ABF16D7004D84F6 /* ExpenseAdd.swift */,
 			);
 			path = Expense;
+			sourceTree = "<group>";
+		};
+		782206072ABF1858004D84F6 /* NavigationTab */ = {
+			isa = PBXGroup;
+			children = (
+				782206082ABF1871004D84F6 /* NavigationTab.swift */,
+			);
+			path = NavigationTab;
+			sourceTree = "<group>";
+		};
+		7822060A2ABF2517004D84F6 /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				7822060B2ABF2533004D84F6 /* BudgetView.swift */,
+			);
+			path = Budget;
 			sourceTree = "<group>";
 		};
 		78839DA32ABE9E8200D0778D = {
@@ -158,6 +184,8 @@
 		78839DBF2ABEA5AB00D0778D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7822060A2ABF2517004D84F6 /* Budget */,
+				782206072ABF1858004D84F6 /* NavigationTab */,
 				782206042ABF16B5004D84F6 /* Expense */,
 				782205F22ABEFA2A004D84F6 /* Main */,
 				782205F12ABEFA0F004D84F6 /* Register */,
@@ -238,7 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				782206062ABF16D7004D84F6 /* ExpenseAdd.swift in Sources */,
+				7822060C2ABF2533004D84F6 /* BudgetView.swift in Sources */,
 				782205F82ABEFD92004D84F6 /* ArcShape.swift in Sources */,
+				782206162ABF2901004D84F6 /* BudgetCard.swift in Sources */,
+				782206092ABF1871004D84F6 /* NavigationTab.swift in Sources */,
 				782206012ABF0005004D84F6 /* UpcomingBillRow.swift in Sources */,
 				782205F52ABEFC75004D84F6 /* SubscriptionModel.swift in Sources */,
 				782205EA2ABEDD0D004D84F6 /* UserLoginScreenView.swift in Sources */,
@@ -247,6 +278,7 @@
 				782205E82ABED919004D84F6 /* UserRegistrationScreenView.swift in Sources */,
 				78839DC12ABEACED00D0778D /* WelcomeScreenView.swift in Sources */,
 				78839DB22ABE9E8200D0778D /* ContentView.swift in Sources */,
+				782206122ABF263F004D84F6 /* BudgetModel.swift in Sources */,
 				782205FF2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift in Sources */,
 				78839DB02ABE9E8200D0778D /* IOS_CW1App.swift in Sources */,
 				782206032ABF1632004D84F6 /* Expense.swift in Sources */,

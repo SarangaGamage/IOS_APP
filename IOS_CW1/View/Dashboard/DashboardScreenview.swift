@@ -18,20 +18,28 @@ struct DashboardView: View {
             VStack(spacing: 0) {
                 ZStack {
                     Rectangle()
-                        .foregroundColor(.blue.opacity(0.5))
+                        .fill(
+                            LinearGradient(
+                                gradient: Gradient(
+                                    colors: [Color.blue.opacity(1.0), Color.blue.opacity(0.0)]
+                                ),
+                                startPoint: .bottom,
+                                endPoint: .top
+                            )
+                        )
                         .frame(width: 400, height: 450)
                         .cornerRadius(25)
                     
-                    Image("ArcBg")
-                        .resizable()
-                        .scaledToFit()
-                    
+//                    Image("ArcBg")
+//                        .resizable()
+//                        .scaledToFit()
+//
                     ZStack {
                         ArcShape()
-                            .foregroundColor(Color.gray.opacity(0.2))
+                            .foregroundColor(Color.green)
                         
                         ArcShape(start: 0, end: 230)
-                            .foregroundColor(Color.blue)
+                            .foregroundColor(Color.red)
                             .shadow(color: Color.secondary.opacity(0.5), radius: 7)
                     }
                     .frame(width: UIScreen.main.bounds.width * 0.72, height: UIScreen.main.bounds.width * 0.72)
@@ -80,6 +88,8 @@ struct DashboardView: View {
                 }
                 .padding(.top, 50)
                 .padding(.horizontal, 20)
+                
+                
             }
         
         
