@@ -10,6 +10,14 @@
 		782205E82ABED919004D84F6 /* UserRegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205E72ABED919004D84F6 /* UserRegistrationScreenView.swift */; };
 		782205EA2ABEDD0D004D84F6 /* UserLoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205E92ABEDD0D004D84F6 /* UserLoginScreenView.swift */; };
 		782205EC2ABEE6DB004D84F6 /* DashboardScreenview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205EB2ABEE6DB004D84F6 /* DashboardScreenview.swift */; };
+		782205F52ABEFC75004D84F6 /* SubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205F42ABEFC75004D84F6 /* SubscriptionModel.swift */; };
+		782205F82ABEFD92004D84F6 /* ArcShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205F72ABEFD92004D84F6 /* ArcShape.swift */; };
+		782205FA2ABEFDCC004D84F6 /* StatusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205F92ABEFDCC004D84F6 /* StatusButton.swift */; };
+		782205FC2ABEFF44004D84F6 /* SegmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205FB2ABEFF44004D84F6 /* SegmentButton.swift */; };
+		782205FF2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205FE2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift */; };
+		782206012ABF0005004D84F6 /* UpcomingBillRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206002ABF0005004D84F6 /* UpcomingBillRow.swift */; };
+		782206032ABF1632004D84F6 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206022ABF1632004D84F6 /* Expense.swift */; };
+		782206062ABF16D7004D84F6 /* ExpenseAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206052ABF16D7004D84F6 /* ExpenseAdd.swift */; };
 		78839DB02ABE9E8200D0778D /* IOS_CW1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78839DAF2ABE9E8200D0778D /* IOS_CW1App.swift */; };
 		78839DB22ABE9E8200D0778D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78839DB12ABE9E8200D0778D /* ContentView.swift */; };
 		78839DB42ABE9E8400D0778D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78839DB32ABE9E8400D0778D /* Assets.xcassets */; };
@@ -21,6 +29,14 @@
 		782205E72ABED919004D84F6 /* UserRegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationScreenView.swift; sourceTree = "<group>"; };
 		782205E92ABEDD0D004D84F6 /* UserLoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginScreenView.swift; sourceTree = "<group>"; };
 		782205EB2ABEE6DB004D84F6 /* DashboardScreenview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreenview.swift; sourceTree = "<group>"; };
+		782205F42ABEFC75004D84F6 /* SubscriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionModel.swift; sourceTree = "<group>"; };
+		782205F72ABEFD92004D84F6 /* ArcShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcShape.swift; sourceTree = "<group>"; };
+		782205F92ABEFDCC004D84F6 /* StatusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusButton.swift; sourceTree = "<group>"; };
+		782205FB2ABEFF44004D84F6 /* SegmentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentButton.swift; sourceTree = "<group>"; };
+		782205FE2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubScriptionHomeRow.swift; sourceTree = "<group>"; };
+		782206002ABF0005004D84F6 /* UpcomingBillRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingBillRow.swift; sourceTree = "<group>"; };
+		782206022ABF1632004D84F6 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		782206052ABF16D7004D84F6 /* ExpenseAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseAdd.swift; sourceTree = "<group>"; };
 		78839DAC2ABE9E8200D0778D /* IOS_CW1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_CW1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78839DAF2ABE9E8200D0778D /* IOS_CW1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_CW1App.swift; sourceTree = "<group>"; };
 		78839DB12ABE9E8200D0778D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,8 +91,30 @@
 		782205F32ABEFAB2004D84F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				782205F42ABEFC75004D84F6 /* SubscriptionModel.swift */,
+				782206022ABF1632004D84F6 /* Expense.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		782205F62ABEFD50004D84F6 /* UICommon */ = {
+			isa = PBXGroup;
+			children = (
+				782205F72ABEFD92004D84F6 /* ArcShape.swift */,
+				782205F92ABEFDCC004D84F6 /* StatusButton.swift */,
+				782205FB2ABEFF44004D84F6 /* SegmentButton.swift */,
+				782205FE2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift */,
+				782206002ABF0005004D84F6 /* UpcomingBillRow.swift */,
+			);
+			path = UICommon;
+			sourceTree = "<group>";
+		};
+		782206042ABF16B5004D84F6 /* Expense */ = {
+			isa = PBXGroup;
+			children = (
+				782206052ABF16D7004D84F6 /* ExpenseAdd.swift */,
+			);
+			path = Expense;
 			sourceTree = "<group>";
 		};
 		78839DA32ABE9E8200D0778D = {
@@ -98,6 +136,7 @@
 		78839DAE2ABE9E8200D0778D /* IOS_CW1 */ = {
 			isa = PBXGroup;
 			children = (
+				782205F62ABEFD50004D84F6 /* UICommon */,
 				782205F32ABEFAB2004D84F6 /* Model */,
 				78839DBF2ABEA5AB00D0778D /* View */,
 				78839DAF2ABE9E8200D0778D /* IOS_CW1App.swift */,
@@ -119,6 +158,7 @@
 		78839DBF2ABEA5AB00D0778D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				782206042ABF16B5004D84F6 /* Expense */,
 				782205F22ABEFA2A004D84F6 /* Main */,
 				782205F12ABEFA0F004D84F6 /* Register */,
 				782205F02ABEF9FE004D84F6 /* Dashboard */,
@@ -197,12 +237,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				782206062ABF16D7004D84F6 /* ExpenseAdd.swift in Sources */,
+				782205F82ABEFD92004D84F6 /* ArcShape.swift in Sources */,
+				782206012ABF0005004D84F6 /* UpcomingBillRow.swift in Sources */,
+				782205F52ABEFC75004D84F6 /* SubscriptionModel.swift in Sources */,
 				782205EA2ABEDD0D004D84F6 /* UserLoginScreenView.swift in Sources */,
 				782205EC2ABEE6DB004D84F6 /* DashboardScreenview.swift in Sources */,
+				782205FA2ABEFDCC004D84F6 /* StatusButton.swift in Sources */,
 				782205E82ABED919004D84F6 /* UserRegistrationScreenView.swift in Sources */,
 				78839DC12ABEACED00D0778D /* WelcomeScreenView.swift in Sources */,
 				78839DB22ABE9E8200D0778D /* ContentView.swift in Sources */,
+				782205FF2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift in Sources */,
 				78839DB02ABE9E8200D0778D /* IOS_CW1App.swift in Sources */,
+				782206032ABF1632004D84F6 /* Expense.swift in Sources */,
+				782205FC2ABEFF44004D84F6 /* SegmentButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
