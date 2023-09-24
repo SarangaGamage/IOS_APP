@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78097C0F2AC0409B0085A075 /* UserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78097C0E2AC0409B0085A075 /* UserSessionManager.swift */; };
 		782205E82ABED919004D84F6 /* UserRegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205E72ABED919004D84F6 /* UserRegistrationScreenView.swift */; };
 		782205EA2ABEDD0D004D84F6 /* UserLoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205E92ABEDD0D004D84F6 /* UserLoginScreenView.swift */; };
 		782205EC2ABEE6DB004D84F6 /* DashboardScreenview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205EB2ABEE6DB004D84F6 /* DashboardScreenview.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78097C0E2AC0409B0085A075 /* UserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionManager.swift; sourceTree = "<group>"; };
 		782205E72ABED919004D84F6 /* UserRegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationScreenView.swift; sourceTree = "<group>"; };
 		782205E92ABEDD0D004D84F6 /* UserLoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginScreenView.swift; sourceTree = "<group>"; };
 		782205EB2ABEE6DB004D84F6 /* DashboardScreenview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreenview.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				78B5B2512ABF38C50075878F /* ButtonPrimary.swift */,
 				78B5B2532ABF3F490075878F /* ExpensesAdd.swift */,
 				78B5B2552ABF5C710075878F /* BarChart.swift */,
+				78097C0E2AC0409B0085A075 /* UserSessionManager.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				7822060C2ABF2533004D84F6 /* BudgetView.swift in Sources */,
 				782205F82ABEFD92004D84F6 /* ArcShape.swift in Sources */,
 				78B5B24C2ABF35040075878F /* CategoryAdd.swift in Sources */,
+				78097C0F2AC0409B0085A075 /* UserSessionManager.swift in Sources */,
 				782206162ABF2901004D84F6 /* BudgetCard.swift in Sources */,
 				782206092ABF1871004D84F6 /* NavigationTab.swift in Sources */,
 				78B5B2542ABF3F490075878F /* ExpensesAdd.swift in Sources */,

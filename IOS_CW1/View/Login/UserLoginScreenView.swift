@@ -13,7 +13,7 @@ struct UserLoginScreenView: View {
     @State private var loginStatus: String = ""
     @State private var showAlert = false
     @State private var isLoggedIn = false
-
+    @EnvironmentObject var userSessionManager: UserSessionManager
     var body: some View {
         NavigationView {
             ScrollView {
@@ -90,16 +90,23 @@ struct UserLoginScreenView: View {
 
             if let data = data {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                    if let success = json?["success"] as? Bool, success == true {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                       let success = json["success"] as? Bool, success == true,
+                       let userData = json["data"] as? [String: Any],
+                       let userEmail = userData["email"] as? String {
+                        userSessionManager.setUserEmail(userEmail)
                         emailAddress = ""
                         password = ""
+                        
                         isLoggedIn = true
+                    } else {
+                        updateLoginStatus(status: "Login failed")
                     }
                 } catch {
                     updateLoginStatus(status: "Login failed")
                 }
             }
+
         }.resume()
     }
 
@@ -112,12 +119,6 @@ struct UserLoginScreenView: View {
 struct UserLoginScreenView_Previews: PreviewProvider {
     static var previews: some View {
         UserLoginScreenView()
+            .environmentObject(UserSessionManager())
     }
 }
-
-
-//struct UserLoginScreenView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        UserLoginScreenView()
-//    }
-//}

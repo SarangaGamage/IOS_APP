@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeScreenView: View {
+    @EnvironmentObject var userSessionManager: UserSessionManager
     var body: some View {
         NavigationView {
             ZStack {
@@ -66,5 +67,6 @@ struct WelcomeScreenView: View {
 struct WelcomeScreenView_Previews: PreviewProvider {
     static var previews: some View {
         WelcomeScreenView()
+            .environmentObject(UserSessionManager())
     }
 }

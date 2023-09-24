@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var userSessionManager: UserSessionManager
     var body: some View {
         VStack{
             WelcomeScreenView() 
@@ -20,6 +21,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(UserSessionManager())
     }
 }
 

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct ExpensesAdd: View {
     @Binding var isPresented: Bool
     @State private var selectedCategoryIndex = 0
@@ -15,13 +14,12 @@ struct ExpensesAdd: View {
     @State private var selectedDate = Date()
     @State private var expenseDescription = ""
     @State private var expenseLocation = ""
-    @State private var showAlert = false // State variable to control the alert
-    
-    let categoryOptions = ["Category 1", "Category 2", "Category 3"]
-
+    @State private var showAlert = false
+    @State private var categoryOptions: [String] = []
+    @EnvironmentObject var userSessionManager: UserSessionManager
     var body: some View {
         VStack {
-            Text("Add a New Expense")
+            Text("Add New Expense")
                 .font(.title)
                 .padding()
             
@@ -56,11 +54,11 @@ struct ExpensesAdd: View {
             HStack {
                 Button(action: {
                     let expenseData: [String: Any] = [
-                        "email": "test",
+                        "email":userSessionManager.userEmail,
                         "amount": (allocateAmount as NSString).doubleValue,
                         "location": expenseLocation,
                         "category": categoryOptions[selectedCategoryIndex],
-                        "date": "testdate"
+                        "date": DateFormatter.localizedString(from: selectedDate, dateStyle: .short, timeStyle: .short)
                     ]
                     
                     if let jsonData = try? JSONSerialization.data(withJSONObject: expenseData) {
@@ -123,9 +121,12 @@ struct ExpensesAdd: View {
         .background(Color.white)
         .cornerRadius(16)
         .padding()
+        .onAppear {
+            getCategoryList()
+        }
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text("Expense Added Successfully"),
+                title: Text("Success"),
                 message: Text("Your expense has been saved successfully."),
                 dismissButton: .default(Text("OK")) {
                     isPresented = false
@@ -133,5 +134,23 @@ struct ExpensesAdd: View {
             )
         }
     }
+    
+    func getCategoryList() {
+        guard let url = URL(string: "http://localhost:3000/getCategoryList") else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error)")
+            } else if let data = data {
+                if let responseJSON = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                    if let data = responseJSON["data"] as? [[String: Any]] {
+                        let categories = data.compactMap { $0["name"] as? String }
+                        categoryOptions = categories
+                    }
+                }
+            }
+        }.resume()
+    }
 }
-

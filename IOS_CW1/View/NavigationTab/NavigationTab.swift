@@ -10,7 +10,7 @@ import SwiftUI
 struct NavigationTab: View {
     @State var isAddExpenseSheetPresented = false
     @State var selectTab: Int = 0
-    
+    @EnvironmentObject var userSessionManager: UserSessionManager
     var body: some View {
         ZStack{
             
@@ -33,7 +33,7 @@ struct NavigationTab: View {
 //                CardsView()
 //                    .frame(width: .screenWidth, height: .screenHeight)
 //            }
-            
+            Text("User Email: \(userSessionManager.userEmail)")
             VStack{
                 Spacer()
                 
@@ -114,7 +114,7 @@ struct NavigationTab: View {
             .padding(.horizontal, 20)
             .padding(.bottom , 10)
             .sheet(isPresented: $isAddExpenseSheetPresented) {
-                      ExpensesAdd(isPresented: $isAddExpenseSheetPresented)
+                       ExpensesAdd(isPresented: $isAddExpenseSheetPresented)
                    }
         }
        // .background(Color.gray)
@@ -126,5 +126,6 @@ struct NavigationTab: View {
 struct NavigationTab_Previews: PreviewProvider {
     static var previews: some View {
         NavigationTab()
+            .environmentObject(UserSessionManager()) // Provide an instance of UserSessionManager
     }
 }

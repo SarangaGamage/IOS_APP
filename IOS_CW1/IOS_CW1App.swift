@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct IOS_CW1App: App {
+    @StateObject var userSessionManager = UserSessionManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(userSessionManager)
         }
     }
 }
