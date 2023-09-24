@@ -17,7 +17,6 @@
 		782205FF2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205FE2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift */; };
 		782206012ABF0005004D84F6 /* UpcomingBillRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206002ABF0005004D84F6 /* UpcomingBillRow.swift */; };
 		782206032ABF1632004D84F6 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206022ABF1632004D84F6 /* Expense.swift */; };
-		782206062ABF16D7004D84F6 /* ExpenseAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206052ABF16D7004D84F6 /* ExpenseAdd.swift */; };
 		782206092ABF1871004D84F6 /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206082ABF1871004D84F6 /* NavigationTab.swift */; };
 		7822060C2ABF2533004D84F6 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7822060B2ABF2533004D84F6 /* BudgetView.swift */; };
 		782206122ABF263F004D84F6 /* BudgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206112ABF263F004D84F6 /* BudgetModel.swift */; };
@@ -31,6 +30,8 @@
 		78B5B24E2ABF36580075878F /* InpuTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5B24D2ABF36580075878F /* InpuTextField.swift */; };
 		78B5B2522ABF38C50075878F /* ButtonPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5B2512ABF38C50075878F /* ButtonPrimary.swift */; };
 		78B5B2542ABF3F490075878F /* ExpensesAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5B2532ABF3F490075878F /* ExpensesAdd.swift */; };
+		78B5B2562ABF5C710075878F /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5B2552ABF5C710075878F /* BarChart.swift */; };
+		78B5B25E2ABF64150075878F /* SwiftPieChart in Frameworks */ = {isa = PBXBuildFile; productRef = 78B5B25D2ABF64150075878F /* SwiftPieChart */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +45,6 @@
 		782205FE2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubScriptionHomeRow.swift; sourceTree = "<group>"; };
 		782206002ABF0005004D84F6 /* UpcomingBillRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingBillRow.swift; sourceTree = "<group>"; };
 		782206022ABF1632004D84F6 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
-		782206052ABF16D7004D84F6 /* ExpenseAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseAdd.swift; sourceTree = "<group>"; };
 		782206082ABF1871004D84F6 /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
 		7822060B2ABF2533004D84F6 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
 		782206112ABF263F004D84F6 /* BudgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModel.swift; sourceTree = "<group>"; };
@@ -59,6 +59,7 @@
 		78B5B24D2ABF36580075878F /* InpuTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InpuTextField.swift; sourceTree = "<group>"; };
 		78B5B2512ABF38C50075878F /* ButtonPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPrimary.swift; sourceTree = "<group>"; };
 		78B5B2532ABF3F490075878F /* ExpensesAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesAdd.swift; sourceTree = "<group>"; };
+		78B5B2552ABF5C710075878F /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B5B25E2ABF64150075878F /* SwiftPieChart in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,16 +129,9 @@
 				78B5B24D2ABF36580075878F /* InpuTextField.swift */,
 				78B5B2512ABF38C50075878F /* ButtonPrimary.swift */,
 				78B5B2532ABF3F490075878F /* ExpensesAdd.swift */,
+				78B5B2552ABF5C710075878F /* BarChart.swift */,
 			);
 			path = UICommon;
-			sourceTree = "<group>";
-		};
-		782206042ABF16B5004D84F6 /* Expense */ = {
-			isa = PBXGroup;
-			children = (
-				782206052ABF16D7004D84F6 /* ExpenseAdd.swift */,
-			);
-			path = Expense;
 			sourceTree = "<group>";
 		};
 		782206072ABF1858004D84F6 /* NavigationTab */ = {
@@ -198,7 +193,6 @@
 			children = (
 				7822060A2ABF2517004D84F6 /* Budget */,
 				782206072ABF1858004D84F6 /* NavigationTab */,
-				782206042ABF16B5004D84F6 /* Expense */,
 				782205F22ABEFA2A004D84F6 /* Main */,
 				782205F12ABEFA0F004D84F6 /* Register */,
 				782205F02ABEF9FE004D84F6 /* Dashboard */,
@@ -223,6 +217,9 @@
 			dependencies = (
 			);
 			name = IOS_CW1;
+			packageProductDependencies = (
+				78B5B25D2ABF64150075878F /* SwiftPieChart */,
+			);
 			productName = IOS_CW1;
 			productReference = 78839DAC2ABE9E8200D0778D /* IOS_CW1.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +248,9 @@
 				Base,
 			);
 			mainGroup = 78839DA32ABE9E8200D0778D;
+			packageReferences = (
+				78B5B25C2ABF64150075878F /* XCRemoteSwiftPackageReference "SwiftPieChart" */,
+			);
 			productRefGroup = 78839DAD2ABE9E8200D0778D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,7 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				782206062ABF16D7004D84F6 /* ExpenseAdd.swift in Sources */,
 				7822060C2ABF2533004D84F6 /* BudgetView.swift in Sources */,
 				782205F82ABEFD92004D84F6 /* ArcShape.swift in Sources */,
 				78B5B24C2ABF35040075878F /* CategoryAdd.swift in Sources */,
@@ -286,6 +285,7 @@
 				78B5B2542ABF3F490075878F /* ExpensesAdd.swift in Sources */,
 				78B5B2522ABF38C50075878F /* ButtonPrimary.swift in Sources */,
 				782206012ABF0005004D84F6 /* UpcomingBillRow.swift in Sources */,
+				78B5B2562ABF5C710075878F /* BarChart.swift in Sources */,
 				78B5B24E2ABF36580075878F /* InpuTextField.swift in Sources */,
 				782205F52ABEFC75004D84F6 /* SubscriptionModel.swift in Sources */,
 				782205EA2ABEDD0D004D84F6 /* UserLoginScreenView.swift in Sources */,
@@ -499,6 +499,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78B5B25C2ABF64150075878F /* XCRemoteSwiftPackageReference "SwiftPieChart" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ilamanov/SwiftPieChart";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78B5B25D2ABF64150075878F /* SwiftPieChart */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78B5B25C2ABF64150075878F /* XCRemoteSwiftPackageReference "SwiftPieChart" */;
+			productName = SwiftPieChart;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 78839DA42ABE9E8200D0778D /* Project object */;
 }

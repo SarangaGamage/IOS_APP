@@ -15,14 +15,17 @@ struct NavigationTab: View {
         ZStack{
             
             if(selectTab == 0) {
+         
                 UserLoginScreenView()
             }
             
             if(selectTab == 1) {
+
                UserRegistrationScreenView()
             }
             
             if(selectTab == 2) {
+        
                DashboardView()
             }
             

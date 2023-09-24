@@ -25,7 +25,10 @@ struct WelcomeScreenView: View {
                         .resizable()
                         .frame(width: 332, height: 332)
                     Spacer()
-                    ButtonPrimary(title : "Get Started")
+                    ButtonPrimary(title: "Get Started", action: {
+                      
+                       // registerUser()
+                    })
                     
                     NavigationLink(destination: {
                         UserLoginScreenView()

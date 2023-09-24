@@ -26,7 +26,10 @@ struct UserLoginScreenView: View {
                 
                 InputTextField(text: $password, placeholder: "Password")
                 
-                ButtonPrimary(title: "Sign In")
+                ButtonPrimary(title: "Sign In", action: {
+                  
+                   // registerUser()
+                })
                 
                 NavigationLink(destination: UserRegistrationScreenView(), label: {
                     HStack {

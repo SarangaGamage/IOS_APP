@@ -9,14 +9,21 @@ import SwiftUI
 
 struct ButtonPrimary: View {
     var title: String
+    var action: () -> Void
     var body: some View {
-        Text(title)
-            .font(.title3)
-            .fontWeight(.bold)
-            .foregroundColor(.white)
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(Color("PrimaryColor"))
-            .cornerRadius(50)
+        Button(action: {
+               
+                    action()
+        }) {
+            Text(title)
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color("PrimaryColor"))
+                .cornerRadius(50)
+        }
+
     }
 }
