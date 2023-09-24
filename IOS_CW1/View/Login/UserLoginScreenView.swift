@@ -96,16 +96,6 @@ struct UserLoginScreenView: View {
                         password = ""
                         isLoggedIn = true
                     }
-                    
-                    
-//                    if let message = json?["message"] as? String {
-//                        if message == "Login successful" {
-//                           // updateLoginStatus(status: message)
-//                            isLoggedIn = true
-//                        } else {
-//                            isLoggedIn = true
-//                        }
-//                    }
                 } catch {
                     updateLoginStatus(status: "Login failed")
                 }

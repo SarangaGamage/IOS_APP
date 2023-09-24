@@ -114,7 +114,7 @@ struct NavigationTab: View {
             .padding(.horizontal, 20)
             .padding(.bottom , 10)
             .sheet(isPresented: $isAddExpenseSheetPresented) {
-                       ExpensesAdd(isPresented: $isAddExpenseSheetPresented)
+                      ExpensesAdd(isPresented: $isAddExpenseSheetPresented)
                    }
         }
        // .background(Color.gray)
