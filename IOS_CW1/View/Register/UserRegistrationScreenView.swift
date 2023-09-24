@@ -89,14 +89,21 @@ struct UserRegistrationScreenView: View {
             if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                    if let message = json?["message"] as? String {
-                        updateRegistrationStatus(status: message, title: "Success")
-                        if message == "User registered successfully" {
-                            emailAddress = ""
-                            fullName = ""
-                            password = ""
+                    if let success = json?["success"] as? Bool, success == true {
+                        emailAddress = ""
+                        fullName = ""
+                        password = ""
+                        if let message = json?["message"] as? String {
+                            updateRegistrationStatus(status: message, title: "Success")
                         }
+                    } else {
+                        if let message = json?["message"] as? String {
+                            updateRegistrationStatus(status: message, title: "Sorry!")
+                        }
+                      
                     }
+
+
                 } catch {
                     updateRegistrationStatus(status: "Registration failed", title: "Sorry!")
                 }

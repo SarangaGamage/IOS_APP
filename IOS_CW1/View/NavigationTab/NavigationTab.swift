@@ -16,7 +16,7 @@ struct NavigationTab: View {
             
             if(selectTab == 0) {
          
-                UserLoginScreenView()
+                DashboardView()
             }
             
             if(selectTab == 1) {
