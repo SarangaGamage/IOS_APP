@@ -10,9 +10,9 @@ import SwiftUI
 struct BudgetCard: View {
     @State var bObj: BudgetModel = BudgetModel(dict: [ "name": "Auto & Transport",
                                                        "icon": "auto_&_transport",
-                                                       "spend_amount": "25.99",
-                                                       "total_amount": "400",
-                                                       "left_amount": "250.01",
+                                                       "spendAmount": "25.99",
+                                                       "totalAmount": "400",
+                                                       "leftAmount": "250.01",
                                                        "color": Color.black ] )
     var body: some View {
         
@@ -27,19 +27,19 @@ struct BudgetCard: View {
                         .foregroundColor(.white)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
-                    Text("$\(bObj.left_amount) left to spend")
+                    Text("$\(bObj.leftAmount) left to spend")
                         .font(.system(size: 12, weight: .bold))
                         .foregroundColor(.gray)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 }
                 
                 VStack(alignment: .trailing){
-                    Text("$\(bObj.total_amount)")
+                    Text("$\(bObj.totalAmount)")
                         .font(.system(size: 14, weight: .bold))
                         .foregroundColor(.white)
                         .frame(alignment: .trailing)
                     
-                    Text("of $\(bObj.left_amount)")
+                    Text("of $\(bObj.leftAmount)")
                         .font(.system(size: 12, weight: .bold))
                         .foregroundColor(.gray)
                         .frame(alignment: .trailing)

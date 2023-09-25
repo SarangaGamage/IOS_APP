@@ -4,7 +4,7 @@
 //
 //  Created by Saranga Gamage on 2023-09-23.
 //
-
+//var color: Color = .green
 import SwiftUI
 
 struct BudgetModel: Identifiable, Equatable {
@@ -13,9 +13,9 @@ struct BudgetModel: Identifiable, Equatable {
     var id: UUID = UUID()
     var name: String = ""
     var icon: String = ""
-    var spend_amount: String = ""
-    var total_amount: String = ""
-    var left_amount: String = ""
+    var spendAmount: String = ""
+    var totalAmount: String = ""
+    var leftAmount: String = ""
     var color: Color = .green
     var perSpend: Double = 0.0
     
@@ -23,11 +23,11 @@ struct BudgetModel: Identifiable, Equatable {
     init(dict: NSDictionary) {
         self.name = dict.value(forKey: "name") as? String ?? ""
         self.icon = dict.value(forKey: "icon") as? String ?? ""
-        self.spend_amount = dict.value(forKey: "spend_amount") as? String ?? ""
-        self.total_amount = dict.value(forKey: "total_amount") as? String ?? ""
-        self.left_amount = dict.value(forKey: "left_amount") as? String ?? ""
+        self.spendAmount = dict.value(forKey: "spendAmount") as? String ?? ""
+        self.totalAmount = dict.value(forKey: "totalAmount") as? String ?? ""
+        self.leftAmount = dict.value(forKey: "leftAmount") as? String ?? ""
         self.color = dict.value(forKey: "color") as? Color ?? .green
-        self.perSpend = ( (Double(self.left_amount ) ?? 0) / (Double(self.total_amount) ?? 1.0) )
+        self.perSpend = ( (Double(self.leftAmount ) ?? 0) / (Double(self.totalAmount) ?? 1.0) )
     }
     
     static func == (lhs: BudgetModel, rhs: BudgetModel) -> Bool {

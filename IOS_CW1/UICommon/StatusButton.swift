@@ -32,7 +32,7 @@ struct StatusButton: View {
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 68, maxHeight: 68)
                 
-                .background(Color.green.opacity(  0.2 ))
+                .background(color.opacity(0.5))
                 .overlay {
                     RoundedRectangle(cornerRadius:  16)
                         .stroke( Color.gray.opacity(0.5), lineWidth: 1)

@@ -21,7 +21,7 @@ struct NavigationTab: View {
             
             if(selectTab == 1) {
 
-               UserRegistrationScreenView()
+                BudgetView()
             }
             
             if(selectTab == 2) {
@@ -29,10 +29,9 @@ struct NavigationTab: View {
                DashboardView()
             }
             
-//            if(selectTab == 3) {
-//                CardsView()
-//                    .frame(width: .screenWidth, height: .screenHeight)
-//            }
+            if(selectTab == 3) {
+                BudgetView()
+            }
             Text("User Email: \(userSessionManager.userEmail)")
             VStack{
                 Spacer()
@@ -126,6 +125,6 @@ struct NavigationTab: View {
 struct NavigationTab_Previews: PreviewProvider {
     static var previews: some View {
         NavigationTab()
-            .environmentObject(UserSessionManager()) // Provide an instance of UserSessionManager
+            .environmentObject(UserSessionManager()) 
     }
 }
