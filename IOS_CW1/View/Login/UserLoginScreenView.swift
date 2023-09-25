@@ -23,9 +23,9 @@ struct UserLoginScreenView: View {
                         .fontWeight(.bold)
                         .padding(.bottom, 10)
 
-                    Image(uiImage: #imageLiteral(resourceName: "ImagesSet"))
+                    Image(uiImage: #imageLiteral(resourceName: "logo"))
                         .resizable()
-                        .frame(width: 332, height: 332)
+                        .frame(width: 200, height: 180)
 
                     InputTextField(text: $emailAddress, placeholder: "Email address")
 

@@ -24,38 +24,39 @@ struct BudgetCard: View {
                 VStack{
                     Text(bObj.name)
                         .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(.white)
+                        .foregroundColor(.gray)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
                     Text("$\(bObj.leftAmount) left to spend")
                         .font(.system(size: 12, weight: .bold))
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 }
                 
                 VStack(alignment: .trailing){
                     Text("$\(bObj.totalAmount)")
                         .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(.white)
+                        .foregroundColor(.gray)
                         .frame(alignment: .trailing)
                     
-                    Text("of $\(bObj.leftAmount)")
+                    Text("of $\(bObj.spendAmount)")
                         .font(.system(size: 12, weight: .bold))
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
                         .frame(alignment: .trailing)
                 }
             }
             ProgressView(value: bObj.perSpend, total: 1)
-                .tint(Color.green)
-                .background(Color.red)
+                .tint(Color(#colorLiteral(red: 0.007843137255, green: 0.5098039216, blue: 0.1176470588, alpha: 1)))
+                .background(Color(#colorLiteral(red: 0.5098039216, green: 0.007843137255, blue: 0.007843137255, alpha: 1)))
+
         }
         
         .padding(15)
         .frame(minWidth: 0, maxWidth: .infinity)
-        .background(Color.gray.opacity( 0.2  ))
+        .background(Color.gray.opacity( 0.01  ))
         .overlay {
             RoundedRectangle(cornerRadius:  12)
-                .stroke(  Color.gray, lineWidth: 1)
+                .stroke(  Color(#colorLiteral(red: 0.502, green: 0.549, blue: 1.0, alpha: 1.0)), lineWidth: 1.5)
         }
         .cornerRadius(12)
     }

@@ -38,7 +38,7 @@ struct WelcomeScreenView: View {
                             .font(.title3)
                             .fontWeight(.bold)
                             .padding()
-                            .foregroundColor(Color("PrimaryColor"))
+                            .foregroundColor(Color(#colorLiteral(red: 0.1960784314, green: 0.1450980392, blue: 0.5568627451, alpha: 1)))
                             .frame(maxWidth: .infinity)
                             .background(Color.white)
                             .cornerRadius(50.0)
