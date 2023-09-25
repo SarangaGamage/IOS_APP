@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78097C0F2AC0409B0085A075 /* UserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78097C0E2AC0409B0085A075 /* UserSessionManager.swift */; };
+		78097C112AC1DE110085A075 /* IncomeAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78097C102AC1DE110085A075 /* IncomeAdd.swift */; };
 		782205E82ABED919004D84F6 /* UserRegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205E72ABED919004D84F6 /* UserRegistrationScreenView.swift */; };
 		782205EA2ABEDD0D004D84F6 /* UserLoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205E92ABEDD0D004D84F6 /* UserLoginScreenView.swift */; };
 		782205EC2ABEE6DB004D84F6 /* DashboardScreenview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782205EB2ABEE6DB004D84F6 /* DashboardScreenview.swift */; };
@@ -22,6 +23,7 @@
 		7822060C2ABF2533004D84F6 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7822060B2ABF2533004D84F6 /* BudgetView.swift */; };
 		782206122ABF263F004D84F6 /* BudgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206112ABF263F004D84F6 /* BudgetModel.swift */; };
 		782206162ABF2901004D84F6 /* BudgetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782206152ABF2901004D84F6 /* BudgetCard.swift */; };
+		78231C2B2AC1F49E00A54F0F /* SavingAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78231C2A2AC1F49E00A54F0F /* SavingAdd.swift */; };
 		78839DB02ABE9E8200D0778D /* IOS_CW1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78839DAF2ABE9E8200D0778D /* IOS_CW1App.swift */; };
 		78839DB22ABE9E8200D0778D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78839DB12ABE9E8200D0778D /* ContentView.swift */; };
 		78839DB42ABE9E8400D0778D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78839DB32ABE9E8400D0778D /* Assets.xcassets */; };
@@ -37,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		78097C0E2AC0409B0085A075 /* UserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionManager.swift; sourceTree = "<group>"; };
+		78097C102AC1DE110085A075 /* IncomeAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeAdd.swift; sourceTree = "<group>"; };
 		782205E72ABED919004D84F6 /* UserRegistrationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationScreenView.swift; sourceTree = "<group>"; };
 		782205E92ABEDD0D004D84F6 /* UserLoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginScreenView.swift; sourceTree = "<group>"; };
 		782205EB2ABEE6DB004D84F6 /* DashboardScreenview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreenview.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		7822060B2ABF2533004D84F6 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
 		782206112ABF263F004D84F6 /* BudgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModel.swift; sourceTree = "<group>"; };
 		782206152ABF2901004D84F6 /* BudgetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCard.swift; sourceTree = "<group>"; };
+		78231C2A2AC1F49E00A54F0F /* SavingAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingAdd.swift; sourceTree = "<group>"; };
 		78839DAC2ABE9E8200D0778D /* IOS_CW1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_CW1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78839DAF2ABE9E8200D0778D /* IOS_CW1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_CW1App.swift; sourceTree = "<group>"; };
 		78839DB12ABE9E8200D0778D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				78B5B2532ABF3F490075878F /* ExpensesAdd.swift */,
 				78B5B2552ABF5C710075878F /* BarChart.swift */,
 				78097C0E2AC0409B0085A075 /* UserSessionManager.swift */,
+				78097C102AC1DE110085A075 /* IncomeAdd.swift */,
+				78231C2A2AC1F49E00A54F0F /* SavingAdd.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -302,6 +308,8 @@
 				782205FF2ABEFFA9004D84F6 /* SubScriptionHomeRow.swift in Sources */,
 				78839DB02ABE9E8200D0778D /* IOS_CW1App.swift in Sources */,
 				782206032ABF1632004D84F6 /* Expense.swift in Sources */,
+				78097C112AC1DE110085A075 /* IncomeAdd.swift in Sources */,
+				78231C2B2AC1F49E00A54F0F /* SavingAdd.swift in Sources */,
 				782205FC2ABEFF44004D84F6 /* SegmentButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
