@@ -90,8 +90,8 @@ struct BudgetView: View {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        let parameters: [String: Any] = ["email": email]
-       // let parameters: [String: Any] = ["email": userSessionManager.userEmail]
+        //let parameters: [String: Any] = ["email": email]
+        let parameters: [String: Any] = ["email": userSessionManager.userEmail]
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: parameters)
         } catch {

@@ -11,6 +11,8 @@ struct CategoryAdd: View {
     @Binding var isPresented: Bool
     @State private var categoryName = ""
     @State private var allocateAmount = ""
+    @State private var messageText = ""
+    @State private var isCategoryAdded = false
     @State private var showAlert = false
     @EnvironmentObject var userSessionManager: UserSessionManager
 
@@ -26,8 +28,8 @@ struct CategoryAdd: View {
             HStack {
                 Button(action: {
                     let categoryData: [String: Any] = [
-                        "email": "saranga@gmail.com",
-                       // "email": userSessionManager.userEmail,
+                       // "email": "saranga@gmail.com",
+                        "email": userSessionManager.userEmail,
                         "name": categoryName,
                         "allocatedAmount": (allocateAmount as NSString).doubleValue
                     ]
@@ -49,8 +51,13 @@ struct CategoryAdd: View {
                                 if let responseJSON = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                                     if let success = responseJSON["success"] as? Bool, let message = responseJSON["message"] as? String {
                                         if success {
+                                            messageText = message;
                                             showAlert = true
+                                            isCategoryAdded = true
                                         } else {
+                                            messageText = message;
+                                            showAlert = true
+                                            isCategoryAdded = false
                                             print("Category save failed: \(message)")
                                         }
                                     }
@@ -94,10 +101,14 @@ struct CategoryAdd: View {
         .padding()
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text("Category Added Successfully"),
-                message: Text("Your category has been saved successfully."),
+                title: Text("Message"),
+                message: Text(messageText),
                 dismissButton: .default(Text("OK")) {
-                    isPresented = false
+                    if isCategoryAdded {
+                        isPresented = false
+                    } else {
+                        isPresented = true
+                    }
                 }
             )
         }
