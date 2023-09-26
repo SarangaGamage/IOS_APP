@@ -42,7 +42,7 @@ struct IncomeAdd: View {
                     }
                     
                     let categoryData: [String: Any] = [
-                        "email": "saranga@gmail.com",
+                        "email": email,
                         "amount": amountDouble
                     ]
                     

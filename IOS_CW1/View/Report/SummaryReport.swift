@@ -3,7 +3,7 @@ import SwiftUI
 struct FinancialSummaryView: View {
     @State private var summaryData: FinancialSummaryData?
     @State private var isLoading = false
-
+    @EnvironmentObject var userSessionManager: UserSessionManager
     var body: some View {
         NavigationView {
             ScrollView {
@@ -60,7 +60,7 @@ struct FinancialSummaryView: View {
             return
         }
         
-        let requestBody: [String: String] = ["email": "saranga@gmail.com"]
+        let requestBody: [String: String] = ["email": userSessionManager.userEmail]
         
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "POST"

@@ -144,8 +144,8 @@ struct ExpensesAdd: View {
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let parameters: [String: Any] = ["email": "saranga@gmail.com"]
-      //  let parameters: [String: Any] = ["email": userSessionManager.userEmail]
+       // let parameters: [String: Any] = ["email": "saranga@gmail.com"]
+       let parameters: [String: Any] = ["email": userSessionManager.userEmail]
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: parameters)
         } catch {

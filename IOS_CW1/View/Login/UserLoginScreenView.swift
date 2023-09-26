@@ -31,7 +31,7 @@ struct UserLoginScreenView: View {
 
                     InputTextField(text: $emailAddress, placeholder: "Email address")
 
-                    InputTextField(text: $password, placeholder: "Password")
+                    InputTextField(text: $password, placeholder: "Password", isSecure: true)
 
                     ButtonPrimary(title: "Sign In", action: {
                         loginUser()
@@ -46,7 +46,7 @@ struct UserLoginScreenView: View {
                             Text("New around here?")
                                 .foregroundColor(Color.black)
                             Text("Sign Up")
-                                .foregroundColor(Color("PrimaryColor"))
+                                .foregroundColor(Color.blue)
                         }
                     })
                 }

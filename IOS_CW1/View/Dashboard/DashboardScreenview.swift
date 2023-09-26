@@ -17,6 +17,7 @@ struct DashboardView: View {
     @State private var isIncomeAddPresented = false
     @State private var isSavingAddPresented = false
     @State private var test: String = ""
+    @EnvironmentObject var userSessionManager: UserSessionManager
 
     var body: some View {
         ScrollView {
@@ -108,7 +109,7 @@ struct DashboardView: View {
 
     func fetchAnalyticsData() {
         let url = URL(string: "http://localhost:3000/getAnalytics")!
-        let body: [String: Any] = ["email": "saranga@gmail.com"]
+        let body: [String: Any] = ["email": userSessionManager.userEmail]
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

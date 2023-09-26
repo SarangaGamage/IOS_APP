@@ -32,9 +32,10 @@ struct WelcomeScreenView: View {
                         .padding(.top, 40)
                     
                     Text("Expense Manager")
-                        .font(.title)
-                        .font(.system(size: 24)) 
+                       // .font(.title)
+                        .font(.system(size: 22))
                         .foregroundColor(Color(#colorLiteral(red: 0.1960784314, green: 0.1450980392, blue: 0.5568627451, alpha: 1)))
+                        .padding(.bottom, 18)
 
           
                     ButtonPrimary(title: "Get Started", action: {
