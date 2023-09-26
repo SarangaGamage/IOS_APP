@@ -24,6 +24,11 @@ struct SavingAdd: View {
                 .font(.title)
                 .padding()
             
+            Image(uiImage: #imageLiteral(resourceName: "Saving"))
+                .resizable()
+                .frame(width: 200, height: 200)
+                .padding()
+            
             InputTextField(text: $amount, placeholder: "Add Your Saving Amount")
 
             HStack {

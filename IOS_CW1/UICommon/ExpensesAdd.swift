@@ -23,9 +23,9 @@ struct ExpensesAdd: View {
                 .font(.title)
                 .padding()
             
-            Image(uiImage: #imageLiteral(resourceName: "ImagesSet"))
+            Image(uiImage: #imageLiteral(resourceName: "Expense"))
                 .resizable()
-                .frame(width: 332, height: 332)
+                .frame(width: 150, height: 150)
             
             HStack {
                 Picker("Category", selection: $selectedCategoryIndex) {

@@ -22,10 +22,15 @@ struct BudgetView: View {
 
     var body: some View {
         ScrollView {
-            Image(uiImage: #imageLiteral(resourceName: "ImagesSet"))
+            Text("My Categories & Budgets")
+                .font(.title)
+                .padding(.top, 120)
+            
+            Image(uiImage: #imageLiteral(resourceName: "Category"))
                 .resizable()
-                .frame(width: 332, height: 332)
-                .padding(.top, 80)
+                .frame(width: 200, height: 200)
+                .padding()
+               
 
             LazyVStack(spacing: 15) {
                 ForEach(budgetData, id: \.name) { budgetResponse in

@@ -24,7 +24,14 @@ struct IncomeAdd: View {
                 .font(.title)
                 .padding()
             
+            Image(uiImage: #imageLiteral(resourceName: "Income"))
+                .resizable()
+                .frame(width: 200, height: 200)
+                .padding()
+            
             InputTextField(text: $amount, placeholder: "Add Your Income Amount")
+            
+
 
             HStack {
                 Button(action: {

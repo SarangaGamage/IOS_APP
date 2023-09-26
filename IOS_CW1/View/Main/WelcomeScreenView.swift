@@ -14,18 +14,29 @@ struct WelcomeScreenView: View {
             ZStack {
                 Color("BgColor").edgesIgnoringSafeArea(.all)
                 VStack {
-                    Spacer()
+               
                     Text("Welcome")
                          .font(.largeTitle)
                          .fontWeight(.bold)
                      
-                     Text("Manage Your Finances")
-                         .font(.title)
-                         .foregroundColor(Color("PrimaryColor"))
-                    Image(uiImage: #imageLiteral(resourceName: "ImagesSet"))
+                    Text("Manage Your Finances")
+                        .font(.title)
+                        .foregroundColor(Color(#colorLiteral(red: 0.1960784314, green: 0.1450980392, blue: 0.5568627451, alpha: 1)))
+                       // .background(Color(#colorLiteral(red: 0.1960784314, green: 0.1450980392, blue: 0.5568627451, alpha: 1)))
+
+
+                    Image(uiImage: #imageLiteral(resourceName: "logo"))
                         .resizable()
-                        .frame(width: 332, height: 332)
-                    Spacer()
+                        .frame(width: 200, height: 180)
+                        .padding(.bottom, 40)
+                        .padding(.top, 40)
+                    
+                    Text("Expense Manager")
+                        .font(.title)
+                        .font(.system(size: 24)) 
+                        .foregroundColor(Color(#colorLiteral(red: 0.1960784314, green: 0.1450980392, blue: 0.5568627451, alpha: 1)))
+
+          
                     ButtonPrimary(title: "Get Started", action: {
                       
                        // registerUser()
@@ -52,7 +63,7 @@ struct WelcomeScreenView: View {
                             Text("New around here?")
                                 .foregroundColor(Color.black)
                             Text("Sign Up")
-                                .foregroundColor(Color("PrimaryColor"))
+                                .foregroundColor(Color.blue)
                         }
                     })
                     

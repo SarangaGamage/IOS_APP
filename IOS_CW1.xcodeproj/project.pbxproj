@@ -35,6 +35,7 @@
 		78B5B2542ABF3F490075878F /* ExpensesAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5B2532ABF3F490075878F /* ExpensesAdd.swift */; };
 		78B5B2562ABF5C710075878F /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5B2552ABF5C710075878F /* BarChart.swift */; };
 		78B5B25E2ABF64150075878F /* SwiftPieChart in Frameworks */ = {isa = PBXBuildFile; productRef = 78B5B25D2ABF64150075878F /* SwiftPieChart */; };
+		78E873BA2AC33E62008F15EB /* SummaryReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E873B92AC33E62008F15EB /* SummaryReport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		78B5B2512ABF38C50075878F /* ButtonPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPrimary.swift; sourceTree = "<group>"; };
 		78B5B2532ABF3F490075878F /* ExpensesAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesAdd.swift; sourceTree = "<group>"; };
 		78B5B2552ABF5C710075878F /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		78E873B92AC33E62008F15EB /* SummaryReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryReport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		78839DBF2ABEA5AB00D0778D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78E873B82AC33E37008F15EB /* Report */,
 				7822060A2ABF2517004D84F6 /* Budget */,
 				782206072ABF1858004D84F6 /* NavigationTab */,
 				782205F22ABEFA2A004D84F6 /* Main */,
@@ -208,6 +211,14 @@
 				782205EF2ABEF9C8004D84F6 /* Login */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		78E873B82AC33E37008F15EB /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				78E873B92AC33E62008F15EB /* SummaryReport.swift */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 				78097C0F2AC0409B0085A075 /* UserSessionManager.swift in Sources */,
 				782206162ABF2901004D84F6 /* BudgetCard.swift in Sources */,
 				782206092ABF1871004D84F6 /* NavigationTab.swift in Sources */,
+				78E873BA2AC33E62008F15EB /* SummaryReport.swift in Sources */,
 				78B5B2542ABF3F490075878F /* ExpensesAdd.swift in Sources */,
 				78B5B2522ABF38C50075878F /* ButtonPrimary.swift in Sources */,
 				782206012ABF0005004D84F6 /* UpcomingBillRow.swift in Sources */,

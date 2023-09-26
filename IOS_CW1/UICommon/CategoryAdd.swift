@@ -21,6 +21,7 @@ struct CategoryAdd: View {
             Text("Add a New Category")
                 .font(.title)
                 .padding()
+     
 
             InputTextField(text: $categoryName, placeholder: "Category Name")
             InputTextField(text: $allocateAmount, placeholder: "Allocate Amount")

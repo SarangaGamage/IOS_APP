@@ -26,13 +26,12 @@ struct NavigationTab: View {
             
             if(selectTab == 2) {
         
-               DashboardView()
+               FinancialSummaryView()
             }
             
             if(selectTab == 3) {
                 BudgetView()
             }
-            Text("User Email: \(userSessionManager.userEmail)")
             VStack{
                 Spacer()
                 
@@ -51,23 +50,23 @@ struct NavigationTab: View {
                             Button {
                                 selectTab = 0
                             } label: {
-                                Image("AppleLogo")
+                                Image(systemName: "house.fill")
                                     .resizable()
                                     .frame(width: 20, height: 20)
                                     .padding()
                             }
-                            .foregroundColor( selectTab == 0 ? .white : .gray )
+                            .foregroundColor(selectTab == 0 ? .white : .gray)
                             
                             Spacer()
                             Button {
                                 selectTab = 1
                             } label: {
-                                Image("AppleLogo")
+                                Image(systemName: "list.bullet")
                                     .resizable()
                                     .frame(width: 20, height: 20)
                                     .padding()
                             }
-                            .foregroundColor( selectTab == 1 ? .white : .gray )
+                            .foregroundColor(selectTab == 1 ? .white : .gray)
                             
                             
                             Rectangle()
@@ -77,23 +76,24 @@ struct NavigationTab: View {
                             Button {
                                 selectTab = 2
                             } label: {
-                                Image("AppleLogo")
+                                Image(systemName: "doc.fill")
                                     .resizable()
                                     .frame(width: 20, height: 20)
                                     .padding()
                             }
-                            .foregroundColor( selectTab == 2 ? .white : .gray )
+                            .foregroundColor(selectTab == 2 ? .white : .gray)
                             
                             Spacer()
                             Button {
                                 selectTab = 3
                             } label: {
-                                Image("AppleLogo")
+                                Image(systemName: "person.fill")
                                     .resizable()
                                     .frame(width: 20, height: 20)
                                     .padding()
                             }
-                            .foregroundColor( selectTab == 3 ? .white : .gray )
+                            .foregroundColor(selectTab == 3 ? .white : .gray)
+
                             Spacer()
                         }
                     }
