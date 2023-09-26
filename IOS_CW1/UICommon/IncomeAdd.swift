@@ -14,6 +14,9 @@ struct IncomeAdd: View {
     @State private var isCategoryAdded = false
     @State private var showAlert = false
     @EnvironmentObject var userSessionManager: UserSessionManager
+    
+    // Add a closure property to handle income added
+    var onIncomeAdded: (() -> Void)?
 
     var body: some View {
         VStack {
@@ -63,6 +66,8 @@ struct IncomeAdd: View {
                                         messageText = message
                                         showAlert = true
                                         isCategoryAdded = success
+                                        // Call the closure when income is added successfully
+                                        onIncomeAdded?()
                                     }
                                 }
                             }
@@ -115,4 +120,3 @@ struct IncomeAdd: View {
         }
     }
 }
-

@@ -17,6 +17,7 @@ struct DashboardView: View {
     @State private var isIncomeAddPresented = false
     @State private var isSavingAddPresented = false
     @State private var test: String = ""
+
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
@@ -62,14 +63,13 @@ struct DashboardView: View {
 
                     VStack {
                         HStack {
-                     
-                            StatusButton(title: "Add Income",  color: Color(#colorLiteral(red: 0.4392156863, green: 1, blue: 0.4941176471, alpha: 1))) {
+                            StatusButton(title: "Add Income", color: Color(#colorLiteral(red: 0.4392156863, green: 1, blue: 0.4941176471, alpha: 1))) {
                                 isIncomeAddPresented = true
                                 fetchAnalyticsData()
                             }
 
                             StatusButton(title: "Add Expenses", color: Color(#colorLiteral(red: 1.0, green: 0.6274509804, blue: 0.6274509804, alpha: 1.0))) {
-
+                                // Handle adding expenses here if needed
                             }
 
                             StatusButton(title: "Add Savings", color: Color(#colorLiteral(red: 0.502, green: 0.549, blue: 1.0, alpha: 1.0))) {
@@ -91,12 +91,16 @@ struct DashboardView: View {
                 .padding(.horizontal, 20)
             }
         }.edgesIgnoringSafeArea(.top)
-            .sheet(isPresented: $isIncomeAddPresented) {
-                IncomeAdd(isPresented: $isIncomeAddPresented)
-            }
-            .sheet(isPresented: $isSavingAddPresented) {
-                SavingAdd(isPresented: $isSavingAddPresented)
-            }
+        .sheet(isPresented: $isIncomeAddPresented) {
+            IncomeAdd(isPresented: $isIncomeAddPresented, onIncomeAdded: {
+                fetchAnalyticsData()
+            })
+        }
+        .sheet(isPresented: $isSavingAddPresented) {
+            SavingAdd(isPresented: $isSavingAddPresented, onSavingsAdded: {
+                fetchAnalyticsData()
+            })
+        }
         .onAppear {
             fetchAnalyticsData()
         }
@@ -137,7 +141,6 @@ struct AnalyticsResponse: Decodable {
     let saving: Double
     let balance: Double
 }
-
 
 
 

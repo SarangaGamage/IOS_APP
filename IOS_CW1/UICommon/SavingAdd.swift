@@ -14,10 +14,13 @@ struct SavingAdd: View {
     @State private var isCategoryAdded = false
     @State private var showAlert = false
     @EnvironmentObject var userSessionManager: UserSessionManager
+    
+    // Add a closure property to handle savings added
+    var onSavingsAdded: (() -> Void)?
 
     var body: some View {
         VStack {
-            Text("Add Income")
+            Text("Add Savings")
                 .font(.title)
                 .padding()
             
@@ -63,6 +66,8 @@ struct SavingAdd: View {
                                         messageText = message
                                         showAlert = true
                                         isCategoryAdded = success
+                                        // Call the closure when savings are added successfully
+                                        onSavingsAdded?()
                                     }
                                 }
                             }
@@ -115,4 +120,3 @@ struct SavingAdd: View {
         }
     }
 }
-
