@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StatusButton: View {
     @State var title: String = "Title"
-    @State var value: String = "10"
+    @State var value: String = "0"
     @State var color: Color = .secondary
     var onPressed: (()->())?
     var body: some View {
@@ -20,13 +20,17 @@ struct StatusButton: View {
             ZStack(alignment: .top){
                 VStack{
                     VStack {
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: 24))
+                            .foregroundColor(.blue)
+                        
                         Text(title)
                             .font(.system(size: 12, weight: .semibold))
                             .foregroundColor(.blue)
                         
-                        Text(value)
-                            .font(.system(size: 14, weight: .semibold))
-                            .foregroundColor(.black)
+//                        Text(String(value))
+//                            .font(.system(size: 14, weight: .semibold))
+//                            .foregroundColor(.black)
                     }
 
                 }

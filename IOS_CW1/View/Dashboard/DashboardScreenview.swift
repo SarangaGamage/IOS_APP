@@ -8,13 +8,15 @@
 import SwiftUI
 
 
+
 struct DashboardView: View {
-    @State private var income: Double = 5000
-    @State private var expenses: Double = 3000
-    @State private var savings: Double = 2000
+    @State private var expense: Double = 0
+    @State private var income: Double = 0
+    @State private var saving: Double = 0
+    @State private var balance: Double = 0
     @State private var isIncomeAddPresented = false
     @State private var isSavingAddPresented = false
-
+    @State private var test: String = ""
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
@@ -48,11 +50,11 @@ struct DashboardView: View {
                             .scaledToFit()
                             .frame(width: 150, height: 80)
 
-                        Text("$1,235")
+                        Text(String(balance))
                             .font(.system(size: 40, weight: .semibold))
                             .foregroundColor(.black)
 
-                        Text("This month's bills")
+                        Text("This month's balance")
                             .font(.system(size: 12, weight: .semibold))
                             .foregroundColor(.black)
                     }
@@ -60,16 +62,19 @@ struct DashboardView: View {
 
                     VStack {
                         HStack {
-                            StatusButton(title: "Income", value: "12", color: Color(#colorLiteral(red: 0.4392156863, green: 1, blue: 0.4941176471, alpha: 1))) {
+                     
+                            StatusButton(title: "Add Income",  color: Color(#colorLiteral(red: 0.4392156863, green: 1, blue: 0.4941176471, alpha: 1))) {
                                 isIncomeAddPresented = true
+                                fetchAnalyticsData()
                             }
 
-                            StatusButton(title: "Expenses", value: "$19.99", color: Color(#colorLiteral(red: 1.0, green: 0.6274509804, blue: 0.6274509804, alpha: 1.0))) {
-                             
+                            StatusButton(title: "Add Expenses", color: Color(#colorLiteral(red: 1.0, green: 0.6274509804, blue: 0.6274509804, alpha: 1.0))) {
+
                             }
 
-                            StatusButton(title: "Savings", value: "$5.99", color: Color(#colorLiteral(red: 0.502, green: 0.549, blue: 1.0, alpha: 1.0))) {
+                            StatusButton(title: "Add Savings", color: Color(#colorLiteral(red: 0.502, green: 0.549, blue: 1.0, alpha: 1.0))) {
                                 isSavingAddPresented = true
+                                fetchAnalyticsData()
                             }
                         }
                         .padding(.top, 310)
@@ -78,25 +83,61 @@ struct DashboardView: View {
                 }
 
                 VStack {
-
-                        FinancialComponentView(title: "Income", amount: income, color: .green)
-  
-                    FinancialComponentView(title: "Expenses", amount: expenses, color: .red)
-                    FinancialComponentView(title: "Savings", amount: savings, color: .blue)
+                    FinancialComponentView(title: "Income", amount: income, color: .green)
+                    FinancialComponentView(title: "Expenses", amount: expense, color: .red)
+                    FinancialComponentView(title: "Savings", amount: saving, color: .blue)
                 }
                 .padding(.top, 10)
                 .padding(.horizontal, 20)
             }
-        }
-        .edgesIgnoringSafeArea(.top)
-        .sheet(isPresented: $isIncomeAddPresented) {
-            IncomeAdd(isPresented: $isIncomeAddPresented)
-        }
-        .sheet(isPresented: $isSavingAddPresented) {
-            SavingAdd(isPresented: $isSavingAddPresented)
+        }.edgesIgnoringSafeArea(.top)
+            .sheet(isPresented: $isIncomeAddPresented) {
+                IncomeAdd(isPresented: $isIncomeAddPresented)
+            }
+            .sheet(isPresented: $isSavingAddPresented) {
+                SavingAdd(isPresented: $isSavingAddPresented)
+            }
+        .onAppear {
+            fetchAnalyticsData()
         }
     }
+
+    func fetchAnalyticsData() {
+        let url = URL(string: "http://localhost:3000/getAnalytics")!
+        let body: [String: Any] = ["email": "saranga@gmail.com"]
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                do {
+                    let analyticsData = try JSONDecoder().decode(AnalyticsResponse.self, from: data)
+                    DispatchQueue.main.async {
+                        expense = analyticsData.expense
+                        income = analyticsData.income
+                        saving = analyticsData.saving
+                        balance = analyticsData.balance
+                    }
+                } catch {
+                    print("Error decoding JSON: \(error)")
+                }
+            } else if let error = error {
+                print("API Request Error: \(error)")
+            }
+        }.resume()
+    }
 }
+
+struct AnalyticsResponse: Decodable {
+    let expense: Double
+    let income: Double
+    let saving: Double
+    let balance: Double
+}
+
 
 
 
