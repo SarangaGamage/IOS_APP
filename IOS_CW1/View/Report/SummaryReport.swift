@@ -60,7 +60,7 @@ struct FinancialSummaryView: View {
             return
         }
         
-        let requestBody: [String: String] = ["email": userSessionManager.userEmail]
+        let requestBody: [String: String] = ["email": "sarangagamage24@gmail.com"]
         
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "POST"
@@ -92,6 +92,27 @@ struct FinancialSummaryView: View {
     }
 }
 
+struct CategoryRowView: View {
+    let category: FinancialSummaryData.Category
+
+    var body: some View {
+        HStack {
+            Text(category.name)
+                .font(.headline)
+                .foregroundColor(.black)
+
+            Spacer()
+
+            if let formattedAmount = currencyFormatter.string(from: NSNumber(value: category.allocatedAmount)) {
+                Text(formattedAmount)
+                    .font(.headline)
+                    .foregroundColor(.blue)
+            }
+        }
+        .padding(.vertical, 8)
+    }
+}
+
 struct SummaryCard: View {
     let title: String
     let value: Double
@@ -106,9 +127,11 @@ struct SummaryCard: View {
                     Text(title)
                         .font(.headline)
                         .foregroundColor(.white)
-                    Text("\(value)")
-                        .font(.title)
-                        .foregroundColor(.white)
+                    if let formattedAmount = currencyFormatter.string(from: NSNumber(value: value)) {
+                        Text(formattedAmount)
+                            .font(.title)
+                            .foregroundColor(.white)
+                    }
                 }
             )
             .padding(.horizontal)
@@ -116,24 +139,14 @@ struct SummaryCard: View {
     }
 }
 
-struct CategoryRowView: View {
-    let category: FinancialSummaryData.Category
-
-    var body: some View {
-        HStack {
-            Text(category.name)
-                .font(.headline)
-                .foregroundColor(.black)
-
-            Spacer()
-
-            Text("\(category.allocatedAmount)")
-                .font(.headline)
-                .foregroundColor(.blue)
-        }
-        .padding(.vertical, 8)
-    }
-}
+let currencyFormatter: NumberFormatter = {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .currency
+    formatter.currencySymbol = "$"
+    formatter.minimumFractionDigits = 2
+    formatter.maximumFractionDigits = 2
+    return formatter
+}()
 
 
 

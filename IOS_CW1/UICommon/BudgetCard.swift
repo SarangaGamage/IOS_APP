@@ -34,12 +34,12 @@ struct BudgetCard: View {
                 }
                 
                 VStack(alignment: .trailing){
-                    Text("$\(bObj.totalAmount)")
+                    Text("$\(bObj.spendAmount)")
                         .font(.system(size: 14, weight: .bold))
                         .foregroundColor(.gray)
                         .frame(alignment: .trailing)
                     
-                    Text("of $\(bObj.spendAmount)")
+                    Text("of $\(bObj.totalAmount)")
                         .font(.system(size: 12, weight: .bold))
                         .foregroundColor(.black)
                         .frame(alignment: .trailing)

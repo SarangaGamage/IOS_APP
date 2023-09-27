@@ -22,8 +22,6 @@ struct WelcomeScreenView: View {
                     Text("Manage Your Finances")
                         .font(.title)
                         .foregroundColor(Color(#colorLiteral(red: 0.1960784314, green: 0.1450980392, blue: 0.5568627451, alpha: 1)))
-                       // .background(Color(#colorLiteral(red: 0.1960784314, green: 0.1450980392, blue: 0.5568627451, alpha: 1)))
-
 
                     Image(uiImage: #imageLiteral(resourceName: "logo"))
                         .resizable()
@@ -32,15 +30,11 @@ struct WelcomeScreenView: View {
                         .padding(.top, 40)
                     
                     Text("Expense Manager")
-                       // .font(.title)
                         .font(.system(size: 22))
                         .foregroundColor(Color(#colorLiteral(red: 0.1960784314, green: 0.1450980392, blue: 0.5568627451, alpha: 1)))
                         .padding(.bottom, 18)
-
-          
+                    
                     ButtonPrimary(title: "Get Started", action: {
-                      
-                       // registerUser()
                     })
                     
                     NavigationLink(destination: {

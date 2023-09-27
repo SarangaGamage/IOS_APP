@@ -13,39 +13,26 @@ struct NavigationTab: View {
     @EnvironmentObject var userSessionManager: UserSessionManager
     var body: some View {
         ZStack{
-            
             if(selectTab == 0) {
-         
                 DashboardView()
             }
-            
             if(selectTab == 1) {
-
                 BudgetView()
             }
-            
             if(selectTab == 2) {
-        
                FinancialSummaryView()
             }
-            
             if(selectTab == 3) {
                 BudgetView()
             }
             VStack{
                 Spacer()
-                
                 ZStack(alignment: .bottom){
-                    
-                    
-                    
                     ZStack(alignment: .center) {
                         Image("NavBar")
                             .resizable()
                             .scaledToFit()
-                        
                         HStack(alignment: .center, spacing: 0){
-                            
                             Spacer()
                             Button {
                                 selectTab = 0
@@ -56,7 +43,6 @@ struct NavigationTab: View {
                                     .padding()
                             }
                             .foregroundColor(selectTab == 0 ? .white : .gray)
-                            
                             Spacer()
                             Button {
                                 selectTab = 1
@@ -67,8 +53,6 @@ struct NavigationTab: View {
                                     .padding()
                             }
                             .foregroundColor(selectTab == 1 ? .white : .gray)
-                            
-                            
                             Rectangle()
                                 .fill(.clear)
                                 .frame(width: 80, height: 0)
@@ -82,7 +66,6 @@ struct NavigationTab: View {
                                     .padding()
                             }
                             .foregroundColor(selectTab == 2 ? .white : .gray)
-                            
                             Spacer()
                             Button {
                                 selectTab = 3
@@ -93,11 +76,9 @@ struct NavigationTab: View {
                                     .padding()
                             }
                             .foregroundColor(selectTab == 3 ? .white : .gray)
-
                             Spacer()
                         }
                     }
-                    
                     Button {
                           isAddExpenseSheetPresented.toggle()
                       } label: {
@@ -107,7 +88,6 @@ struct NavigationTab: View {
                               .padding()
                       }
                       .padding(.bottom, 6)
-                  //  .shadow(color: .secondaryC.opacity(0.5), radius: 6,y: 4)
                 }
             }
             .padding(.horizontal, 20)
@@ -116,7 +96,6 @@ struct NavigationTab: View {
                        ExpensesAdd(isPresented: $isAddExpenseSheetPresented)
                    }
         }
-       // .background(Color.gray)
         .ignoresSafeArea()
         
     }
